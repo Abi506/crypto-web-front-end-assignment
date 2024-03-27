@@ -1,0 +1,17 @@
+.container-large{
+    display: block;
+    height: 118px;
+}
+.container-small{
+    display: none;
+}
+
+@media all and (max-width:576px){
+    .container-large{
+        display: none;
+    }
+    .container-small{
+        display: flex;
+        background-color: #2C2C2A;
+    }
+}

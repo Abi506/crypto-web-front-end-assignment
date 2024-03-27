@@ -1,0 +1,64 @@
+.home-container{
+    background-color: #0C0404 ;
+    margin: 0px;
+    padding:30px;
+}
+.about-image-text-container{
+    display: flex;
+    flex-direction: row;
+    padding:20px;
+}
+.about-image{
+    width:500px;
+    border-radius: 13px;
+}
+
+.about-text-container{
+    margin: 10px;
+    padding:10px;
+}
+.about-crypto-container{
+    display: flex;
+
+}
+.about-crypto-heading{
+    color:#00ab41;
+}
+.about-crypto-heading-2{
+    color:yellow;
+}
+.about-crypto-para{
+    color:white;
+    line-height: 39px;
+}
+
+.populaiton-heading{
+color:rgb(112, 227, 112);
+margin-top: 25px;
+}
+.population-para{
+    color:white;
+}
+
+@media all and (max-width:576px){
+    .home-container{
+        padding: 10px;
+    }
+    .about-image-text-container{
+        display: flex;
+        flex-direction: column;
+        padding:0px;
+    }
+    .about-text-container{
+        padding: 0px;
+    }
+    .about-image{
+        width: 100%;
+    }
+    .about-crypto-container{
+        display: flex;
+        flex-direction: column;
+        padding:10px;
+
+    }
+}
