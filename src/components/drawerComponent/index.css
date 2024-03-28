@@ -1,0 +1,13 @@
+.tabs-container-small{
+    display: flex;
+    flex-direction: column;
+}
+.each-tab{
+    display: flex;
+    flex-direction: row;
+}
+.t-container{
+    display: flex;
+    flex-direction: column;
+    
+}

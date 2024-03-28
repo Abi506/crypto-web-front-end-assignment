@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer ,Label,AreaChart,Area} from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Label, AreaChart, Area } from 'recharts';
 import './index.css';
 
 const data = [
@@ -47,7 +47,8 @@ class Population extends PureComponent {
     console.log(populationData, 'population data in chat');
     return (
       <div className='chart-container'>
-        <ResponsiveContainer width="100%" height={500}>
+        <h1 className='bitcoin-price-heading'>US Population Growth</h1>
+        <ResponsiveContainer width="100%" height={350}>
           <LineChart
             width={500}
             height={300}
@@ -63,9 +64,9 @@ class Population extends PureComponent {
             <XAxis dataKey="year" />
             <YAxis />
             <Legend />
-            <Tooltip/>
-            <Line type="monotone" dataKey="year" stroke="#8884d8" activeDot={{ r: 8 }} />
+            <Tooltip />
             <Line type="monotone" dataKey="population" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="price" stroke="#8884d8" activeDot={{ r: 8 }} />
             <Label
               value="Population"
               position="top"
@@ -73,25 +74,23 @@ class Population extends PureComponent {
             />
           </LineChart>
         </ResponsiveContainer>
-
+        <h1 className='bitcoin-price-heading'>Bitcoin Price History</h1>
         <ResponsiveContainer width="100%" height={500}>
-          
-            <AreaChart
-              data={data}
-              margin={{
-                top: 10,
-                right: 30,
-                left: 0,
-                bottom: 0,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke='none' />
-              <XAxis dataKey="year" />
-              <YAxis />
-              <Tooltip />
-              <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8" />
-            </AreaChart>
-          
+          <AreaChart
+            data={data}
+            margin={{
+              top: 10,
+              right: 30,
+              left: 0,
+              bottom: 0,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke='none' />
+            <XAxis dataKey="year" />
+            <YAxis />
+            <Tooltip />
+            <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8" />
+          </AreaChart>
         </ResponsiveContainer>
       </div>
     );

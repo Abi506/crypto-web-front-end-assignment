@@ -39,7 +39,70 @@ margin-top: 25px;
 .population-para{
     color:white;
 }
+.bitcoin-price-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1B1B1B;
+    border-radius: 5px;
+    margin:10px;
+    padding: 20px;
 
+}
+.coin-btc{
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+}
+.coin-heading{
+    color:yellow;
+    margin-left: 15px;
+    
+}
+.currency-rate{
+    color:rgb(112, 227, 112);
+}
+.currency-symbol{
+    color:white;
+}
+.each-currency{
+    background-color: #232B2B;
+    border-radius: 9px;
+    padding:10px;
+    width:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+.ethereum-price{
+    color:blue;
+    margin-left: 15px;
+}
+.holdings-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.holdings-heading{
+    color: blue;
+    margin-left: 20px;
+}
+.common-usd{
+    color:white;
+}
+.btc{
+    color:#F7931A;
+}
+.eth{
+    color:#627EEA;
+}
+.dot{
+    color:#E6007A;
+}
 @media all and (max-width:576px){
     .home-container{
         padding: 10px;
@@ -60,5 +123,10 @@ margin-top: 25px;
         flex-direction: column;
         padding:10px;
 
+    }
+    .bitcoin-price-container{
+        margin:10px;
+        display: flex;
+        flex-direction: column;
     }
 }

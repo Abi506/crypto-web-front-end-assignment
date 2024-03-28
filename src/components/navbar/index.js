@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import { AppBar, Toolbar, Tabs, Tab, Button, IconButton } from "@mui/material";
+import {Link} from 'react-router-dom'
+import { AppBar, Toolbar, Tabs, Tab, IconButton } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu'; 
 import DrawerComp from '../drawerComponent';
 
@@ -43,13 +44,13 @@ class Navbar extends Component {
                             onChange={this.tabChange}
                             indicatorColor="secondary"
                         >
-                            <Tab label='Home' style={{ color: activeTab === 'home' ? '#00ab41' : 'white' }} value={'home'} />
-                            <Tab label="Organization" style={{ color: activeTab === 'organization' ? '#00ab41' : 'white' }} value={'organization'} />
-                            <Tab label="Assets" style={{ color: activeTab === 'assets' ? '#00ab41' : 'white' }} value={'assets'} />
-                            <Tab label="Trade" style={{ color: activeTab === 'trade' ? '#00ab41' : 'white' }} value={'trade'} />
-                            <Tab label='Wallet' style={{ color: activeTab === 'wallet' ? '#00ab41' : 'white' }} value={'wallet'} />
+                            <Tab label='Home' style={{ color: activeTab === 'home' ? '#00ab41' : 'white' }} href="#home" value={'home'} />
+                            <Tab label="Organization" style={{ color: activeTab === 'organization' ? '#00ab41' : 'white' }} value={'organization'} href="#crypto"/>
+                            <Tab label="Assets" style={{ color: activeTab === 'assets' ? '#00ab41' : 'white' }} value={'assets'}  href="#wallet"/>
+                            <Tab label="Trade" style={{ color: activeTab === 'trade' ? '#00ab41' : 'white' }} value={'trade'} href='#bitcoin-trade'/>
+                          <Tab label='Wallet' style={{ color: activeTab === 'wallet' ? '#00ab41' : 'white' }} href='#wallet' value={'wallet'} />
                         </Tabs>
-                        <Button variant='contained' sx={{ marginLeft: '10px' }}>Login</Button>
+                      
                         <DrawerComp prop={view} onClose={this.closeDrawer} activeTab={activeTab}/>
                     </Toolbar>
                 </AppBar>

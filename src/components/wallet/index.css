@@ -1,0 +1,10 @@
+.wallet-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center ;
+}
+.chart-container {
+    width: 80%; /* Adjust as needed */
+    height: 80%; /* Adjust as needed */
+  }

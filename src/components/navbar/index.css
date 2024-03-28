@@ -5,6 +5,9 @@
 .container-small{
     display: none;
 }
+.links{
+    
+}
 
 @media all and (max-width:576px){
     .container-large{
