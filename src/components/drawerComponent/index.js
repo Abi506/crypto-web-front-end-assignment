@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Drawer, List, ListItemButton, ListItemText } from '@mui/material';
-import { Link } from 'react-router-dom'; // Import Link
-import { AppBar, Toolbar, Tabs, Tab, IconButton } from "@mui/material";
+import { Link } from 'react-router-dom'; 
+
 import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
 import DomainOutlinedIcon from '@mui/icons-material/DomainOutlined';
 import ViewInArOutlinedIcon from '@mui/icons-material/ViewInArOutlined';
@@ -13,10 +13,10 @@ import './index.css';
 class DrawerComp extends Component {
     state = {
         drawer_state: true,
-        activeTab: 'home' // Default active tab is 'home'
+        activeTab: 'home' 
     }
 
-    // Function to handle tab selection
+    
     handleTabClick = (value) => {
         this.setState({ activeTab: value });
     }
@@ -25,7 +25,7 @@ class DrawerComp extends Component {
         const { prop, onClose } = this.props;
         const { activeTab } = this.state;
 
-        // Define the items for the Drawer
+        
         const drawerItems = [
             { text: 'Home', value: 'home', navigate: "home", icon: <HouseOutlinedIcon sx={{ color: activeTab === 'home' ? '#00ab41' : '#ccc' }} /> },
             { text: 'Organization', value: 'organization', navigate: "organization", icon: <DomainOutlinedIcon sx={{ color: activeTab === 'organization' ? '#00ab41' : '#ccc' }} /> },
@@ -44,8 +44,8 @@ class DrawerComp extends Component {
                             key={index}
                             selected={activeTab === item.value}
                             onClick={() => this.handleTabClick(item.value)}
-                            component={Link} // Use Link component for navigation
-                            href={`#${item.navigate}`} // Specify the navigation destination
+                            component={Link} 
+                            href={`#${item.navigate}`} 
                             
                             sx={{
                                 justifyContent: 'center',
